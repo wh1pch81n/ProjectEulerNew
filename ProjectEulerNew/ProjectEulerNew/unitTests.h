@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HeaderAPI.h"
 
 @interface unitTests : NSObject
 + (void)listOfPrimesUnder100;
++ (void)prob16_0_halfAdder;
+//+ (void)prob16_1_fullAdder;
+//+ (void)prob16_2_bigInteger;
+//+ (void)prob16_3_sumOfDigits;
 @end
