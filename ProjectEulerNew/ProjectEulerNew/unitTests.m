@@ -31,10 +31,6 @@
 	[unitTests printEquationWithNuma:7 withNumb:7];
 	[unitTests printEquationWithNuma:6 withNumb:6];
 	[unitTests printEquationWithNuma:5 withNumb:5];
-
-
-
-
 }
 //+ (void)prob16_1_fullAdder;
 //+ (void)prob16_2_bigInteger;
