@@ -13,7 +13,8 @@ int main(int argc, const char * argv[])
 {
 
 	@autoreleasepool {
-	    [unitTests listOfPrimesUnder100];
+//	    [unitTests listOfPrimesUnder100];
+		[unitTests prob16_0_halfAdder];
 	}
     return 0;
 }
