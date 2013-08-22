@@ -50,6 +50,37 @@
 	[unitTests printEquationWithNuma:6 withNumb:6 withCin:2];
 	[unitTests printEquationWithNuma:5 withNumb:5 withCin:8];
 }
-//+ (void)prob16_2_bigInteger;
-//+ (void)prob16_3_sumOfDigits;
++ (void)prob16_2_bigInteger {
+	DHBigInteger *big = [[DHBigInteger alloc] initWithNumber:@(914325237)];
+	NSLog(@"create big number: %s", [big stringFromBigInteger].UTF8String);
+}
++ (void)prob16_3_sumOfDigits {
+	DHBigInteger *numa, *numb, *sum;
+	numa = [[DHBigInteger alloc] initWithNumber:@(9)];
+	sum = [[DHBigInteger alloc] initByAddingBigInteger1:numa withBigInteger:numa];
+	NSLog(@"9+ 9 = %s", [sum stringFromBigInteger].UTF8String);
+	
+	numa = [[DHBigInteger alloc] initWithNumber:@(12)];
+	numb = [[DHBigInteger alloc] initWithNumber:@(98)];
+	sum = [[DHBigInteger alloc] initByAddingBigInteger1:numa withBigInteger:numb];
+	NSLog(@"12+ 98 = %s", [sum stringFromBigInteger].UTF8String);
+	
+	numa = [[DHBigInteger alloc] initWithNumber:@(1257)];
+	numb = [[DHBigInteger alloc] initWithNumber:@(982343)];
+	sum = [[DHBigInteger alloc] initByAddingBigInteger1:numa withBigInteger:numb];
+	NSLog(@"1257+ 982343 = %s", [sum stringFromBigInteger].UTF8String);
+	
+	numa = [[DHBigInteger alloc] initWithNumber:@(1)];
+	for (int i = 0; i < 1001; ++i) {
+		if (i)
+			numa = [[DHBigInteger alloc] initByAddingBigInteger1:numa withBigInteger:numa];
+		NSLog(@"2^%d = %@", i, [numa stringFromBigInteger]);
+	}
+	NSInteger total = 0;
+	NSString *numStr = [numa stringFromBigInteger];
+	for (int i = 0; i < [numStr length]; ++i) {
+		total += [[numStr substringWithRange:NSMakeRange(i, 1)] integerValue];
+	}
+	NSLog(@"sum of digits of 2^1000 is %ld", total);
+}
 @end
