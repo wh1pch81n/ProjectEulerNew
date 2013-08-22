@@ -13,8 +13,9 @@ int main(int argc, const char * argv[])
 {
 
 	@autoreleasepool {
-//	    [unitTests listOfPrimesUnder100];
-//		[unitTests prob16_0_halfAdder];
+		//	    [unitTests listOfPrimesUnder100];
+		[unitTests prob16_0_halfAdder];
+		printf("======================\n");
 		[unitTests prob16_1_fullAdder];
 	}
     return 0;
