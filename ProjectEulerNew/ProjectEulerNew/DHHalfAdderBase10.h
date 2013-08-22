@@ -13,15 +13,21 @@
 #define kExceptionNumOutOfBounds @"NumberOutOfBoundsException"
 #define kExceptionNumOutOfBoundsReason @" 0 <= Num <= 9"
 
-@interface DHHalfAdderBase10 : NSObject {
+/*All subclasses are required to implemente these methods listed in protocol*/
+@protocol DHAdder_protocol <NSObject>
+@required
+#pragma mark - sum of inputs
+- (NSInteger)sumOfInputs;
+@end
+
+@interface DHHalfAdderBase10 : NSObject <DHAdder_protocol>{
 	NSNumber *_numa;
 	NSNumber *_numb;
-	NSNumber *_solution;
-	NSNumber *_cout;
 }
-@property (readonly) NSNumber *solution;
-@property (readonly) NSNumber *cout;
-
 - (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb;
 - (NSNumber *)checkBoundsOfNum:(NSNumber *)num;
+#pragma mark - outputs
+- (NSNumber *)solution;
+- (NSNumber *)cout;
 @end
+

@@ -9,20 +9,10 @@
 #import "DHHalfAdderBase10.h"
 @implementation DHHalfAdderBase10
 - (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb {
-	if (!(self = [super init])) {
+	if (!(self = [super init]) || !(_numa = [self checkBoundsOfNum:numa]) || !(_numb = [self checkBoundsOfNum:numb])) {
 		return nil;
 	}
 	//init code
-	_numa = numa;
-	_numb = numb;
-	[self checkBoundsOfNum:_numa];
-	[self checkBoundsOfNum:_numb];
-	if (!_numa || !_numb) {
-		return nil;
-	}
-	NSInteger sum = [numa integerValue] + [numb integerValue];
-	_solution = 	@(sum % kBase);
-	_cout = @(sum / kBase);
 	return self;
 }
 - (id)init {
@@ -53,5 +43,16 @@
 		num = nil;
 	}
 	return num;
+}
+#pragma mark sum of inputs
+- (NSInteger)sumOfInputs {
+	return [_numa integerValue] + [_numb integerValue];
+}
+#pragma mark - outputs
+- (NSNumber *)solution {
+	return @([self sumOfInputs] % kBase);
+}
+- (NSNumber *)cout {
+	return @([self sumOfInputs] / kBase);
 }
 @end
