@@ -25,6 +25,7 @@
 	NSNumber *_numb;
 }
 - (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb;
+- (id)initWithNumA:(NSNumber *)numa;
 - (NSNumber *)checkBoundsOfNum:(NSNumber *)num;
 #pragma mark - outputs
 - (NSNumber *)solution;

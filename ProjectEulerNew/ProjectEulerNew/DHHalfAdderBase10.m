@@ -15,6 +15,9 @@
 	//init code
 	return self;
 }
+- (id)initWithNumA:(NSNumber *)numa {
+	return [self initWithNumA:numa withNumB:@(0)];
+}
 - (id)init {
 	return [self initWithNumA:@(0) withNumB:@(0)];
 }

@@ -14,6 +14,7 @@
 		7F7D756D17BEB9D700B05C0D /* sieve_of_eratosthenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */; };
 		7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D757117BEBC9700B05C0D /* unitTests.m */; };
 		7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */; };
+		7FFF331117C69AA800ECE6E0 /* DHBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF331017C69AA800ECE6E0 /* DHBigInteger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderAPI.h; sourceTree = "<group>"; };
 		7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHFullAdderBase10.h; sourceTree = "<group>"; };
 		7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHFullAdderBase10.m; sourceTree = "<group>"; };
+		7FFF330F17C69AA800ECE6E0 /* DHBigInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHBigInteger.h; sourceTree = "<group>"; };
+		7FFF331017C69AA800ECE6E0 /* DHBigInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHBigInteger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +109,10 @@
 		7F7D756E17BEB9EA00B05C0D /* API */ = {
 			isa = PBXGroup;
 			children = (
-				7F7D756B17BEB9D700B05C0D /* sieve_of_eratosthenes.h */,
-				7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */,
 				7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */,
+				7FFF330E17C69A6000ECE6E0 /* sieve */,
 				7FFF330D17C689BB00ECE6E0 /* Adders */,
+				7FFF331217C69AB400ECE6E0 /* BigIntegers */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -132,6 +135,24 @@
 				7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */,
 			);
 			name = Adders;
+			sourceTree = "<group>";
+		};
+		7FFF330E17C69A6000ECE6E0 /* sieve */ = {
+			isa = PBXGroup;
+			children = (
+				7F7D756B17BEB9D700B05C0D /* sieve_of_eratosthenes.h */,
+				7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */,
+			);
+			name = sieve;
+			sourceTree = "<group>";
+		};
+		7FFF331217C69AB400ECE6E0 /* BigIntegers */ = {
+			isa = PBXGroup;
+			children = (
+				7FFF330F17C69AA800ECE6E0 /* DHBigInteger.h */,
+				7FFF331017C69AA800ECE6E0 /* DHBigInteger.m */,
+			);
+			name = BigIntegers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7D756D17BEB9D700B05C0D /* sieve_of_eratosthenes.m in Sources */,
+				7FFF331117C69AA800ECE6E0 /* DHBigInteger.m in Sources */,
 				7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */,
 				7F7D756117BEB88200B05C0D /* main.m in Sources */,
 				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
