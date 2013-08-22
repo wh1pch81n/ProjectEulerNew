@@ -10,5 +10,6 @@
 #define ProjectEulerNew_HeaderAPI_h
 #import "sieve_of_eratosthenes.h"
 #import "DHHalfAdderBase10.h"
+#import "DHFullAdderBase10.h"
 
 #endif
