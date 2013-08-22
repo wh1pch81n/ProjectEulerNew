@@ -15,14 +15,14 @@
 	//init code
 	_numa = numa;
 	_numb = numb;
-	[self checkBoundsOfNum:numa];
-	[self checkBoundsOfNum:numb];
+	[self checkBoundsOfNum:_numa];
+	[self checkBoundsOfNum:_numb];
 	if (!_numa || !_numb) {
 		return nil;
 	}
 	NSInteger sum = [numa integerValue] + [numb integerValue];
-	[self privateSetSolution:@(sum % kBase)];
-	[self privateSetCout:@(sum / kBase)];
+	_solution = 	@(sum % kBase);
+	_cout = @(sum / kBase);
 	return self;
 }
 - (id)init {

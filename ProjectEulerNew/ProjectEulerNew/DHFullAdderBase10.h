@@ -8,7 +8,8 @@
 
 #import "DHHalfAdderBase10.h"
 
-@interface DHFullAdderBase10 : DHHalfAdderBase10
+@interface DHFullAdderBase10 : DHHalfAdderBase10 {
+	NSNumber *_cin;
+}
 - (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb withCarryIn:(NSNumber *)cin;
-@property (strong, nonatomic, getter = internalCin, setter = internalSetCin:) NSNumber *cin;
 @end

@@ -14,15 +14,15 @@
 		return nil;
 	}
 	//init code
-	[self internalSetNumA:[self checkBoundsOfNum:numa]];
-	[self internalSetNumB:[self checkBoundsOfNum:numb]];
-	[self internalSetCin:[self checkBoundsOfNum:cin]];
-	if (!_cin || ![self internalNumA] || ![self internalNumB]) {
+	_numa = [self checkBoundsOfNum:numa];
+	_numb = [self checkBoundsOfNum:numb];
+	_cin = [self checkBoundsOfNum:cin];
+	if (!_numa || !_numb || !_cin) {
 		return nil;
 	}
 	NSInteger sum = [numa integerValue] + [numb integerValue] + [cin integerValue];
-	[self privateSetSolution:@(sum % kBase)];
-	[self privateSetCout:@(sum / kBase)];
+	_solution = @(sum % kBase);
+	_cout = @(sum / kBase);
 	return self;
 }
 - (id)init {

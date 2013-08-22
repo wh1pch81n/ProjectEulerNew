@@ -13,12 +13,15 @@
 #define kExceptionNumOutOfBounds @"NumberOutOfBoundsException"
 #define kExceptionNumOutOfBoundsReason @" 0 <= Num <= 9"
 
-@interface DHHalfAdderBase10 : NSObject
+@interface DHHalfAdderBase10 : NSObject {
+	NSNumber *_numa;
+	NSNumber *_numb;
+	NSNumber *_solution;
+	NSNumber *_cout;
+}
+@property (readonly) NSNumber *solution;
+@property (readonly) NSNumber *cout;
+
 - (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb;
 - (NSNumber *)checkBoundsOfNum:(NSNumber *)num;
-
-@property (strong, nonatomic, getter = internalNumA, setter = internalSetNumA:) NSNumber *numa;
-@property (strong, nonatomic, getter = internalNumB, setter = internalSetNumB:) NSNumber *numb;
-@property (strong, nonatomic, setter = privateSetSolution:) NSNumber *solution;
-@property (strong, nonatomic, setter = privateSetCout:) NSNumber *cout;
 @end
