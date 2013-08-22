@@ -17,7 +17,15 @@
 }
 + (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b {
 	DHHalfAdderBase10 *hf = [[DHHalfAdderBase10 alloc] initWithNumA:@(a) withNumB:@(b)];
-	NSLog(@"%ld + %ld = %@:S %@:C", a, b, [hf solution], [hf cout]);
+	if(hf) {
+		NSLog(@"%ld + %ld = %@:S %@:C", a, b, [hf solution], [hf cout]);
+	}
+}
++ (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b withCin:(NSInteger)c{
+	DHHalfAdderBase10 *hf = [[DHFullAdderBase10 alloc] initWithNumA:@(a) withNumB:@(b) withCarryIn:@(c)];
+	if(hf) {
+		NSLog(@"%ld + %ld + %ld = %@:S %@:C", a, b, c, [hf solution], [hf cout]);
+	}
 }
 + (void)prob16_0_halfAdder {
 	[unitTests printEquationWithNuma:2 withNumb:3];
@@ -32,7 +40,16 @@
 	[unitTests printEquationWithNuma:6 withNumb:6];
 	[unitTests printEquationWithNuma:5 withNumb:5];
 }
-//+ (void)prob16_1_fullAdder;
++ (void)prob16_1_fullAdder {
+	[unitTests printEquationWithNuma:2 withNumb:3 withCin:1];
+	[unitTests printEquationWithNuma:9 withNumb:9 withCin:-1];
+	[unitTests printEquationWithNuma:9 withNumb:3 withCin:9];
+	[[DHFullAdderBase10 alloc] initWithNumA:@(9) withNumB:@(6) withCarryIn:nil];
+	[unitTests printEquationWithNuma:8 withNumb:3 withCin:99];
+	[unitTests printEquationWithNuma:7 withNumb:7 withCin:4];
+	[unitTests printEquationWithNuma:6 withNumb:6 withCin:2];
+	[unitTests printEquationWithNuma:5 withNumb:5 withCin:8];
+}
 //+ (void)prob16_2_bigInteger;
 //+ (void)prob16_3_sumOfDigits;
 @end
