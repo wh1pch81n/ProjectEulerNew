@@ -17,6 +17,10 @@ int main(int argc, const char * argv[])
 		[unitTests prob16_0_halfAdder];
 		printf("======================\n");
 		[unitTests prob16_1_fullAdder];
+		printf("======================\n");
+		[unitTests prob16_2_bigInteger];
+		printf("======================\n");
+		[unitTests prob16_3_sumOfDigits];
 	}
     return 0;
 }
