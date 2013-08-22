@@ -13,6 +13,7 @@
 		7F7D756517BEB88200B05C0D /* ProjectEulerNew.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F7D756417BEB88200B05C0D /* ProjectEulerNew.1 */; };
 		7F7D756D17BEB9D700B05C0D /* sieve_of_eratosthenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */; };
 		7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D757117BEBC9700B05C0D /* unitTests.m */; };
+		7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		7F7D757017BEBC9700B05C0D /* unitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unitTests.h; sourceTree = "<group>"; };
 		7F7D757117BEBC9700B05C0D /* unitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unitTests.m; sourceTree = "<group>"; };
 		7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderAPI.h; sourceTree = "<group>"; };
+		7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHFullAdderBase10.h; sourceTree = "<group>"; };
+		7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHFullAdderBase10.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */,
 				7F6DDB7E17C1513100168225 /* DHHalfAdderBase10.h */,
 				7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */,
+				7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */,
+				7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7D756D17BEB9D700B05C0D /* sieve_of_eratosthenes.m in Sources */,
+				7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */,
 				7F7D756117BEB88200B05C0D /* main.m in Sources */,
 				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
 				7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */,

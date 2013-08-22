@@ -17,7 +17,9 @@
 }
 + (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b {
 	DHHalfAdderBase10 *hf = [[DHHalfAdderBase10 alloc] initWithNumA:@(a) withNumB:@(b)];
-	NSLog(@"%ld + %ld = %@:S %@:C", a, b, [hf solution], [hf cout]);
+	if(hf) {
+		NSLog(@"%ld + %ld = %@:S %@:C", a, b, [hf solution], [hf cout]);
+	}
 }
 + (void)prob16_0_halfAdder {
 	[unitTests printEquationWithNuma:2 withNumb:3];
