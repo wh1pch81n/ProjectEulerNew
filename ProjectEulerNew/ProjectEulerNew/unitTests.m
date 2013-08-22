@@ -34,7 +34,7 @@
 	[unitTests printEquationWithNuma:0 withNumb:0];
 	[unitTests printEquationWithNuma:-2 withNumb:3];
 	[unitTests printEquationWithNuma:-8 withNumb:-3];
-	[[DHHalfAdderBase10 alloc] initWithNumA:@(9) withNumB:nil];
+	(void)[[DHHalfAdderBase10 alloc] initWithNumA:@(9) withNumB:nil];
 	[unitTests printEquationWithNuma:86 withNumb:3];
 	[unitTests printEquationWithNuma:7 withNumb:7];
 	[unitTests printEquationWithNuma:6 withNumb:6];
@@ -44,7 +44,7 @@
 	[unitTests printEquationWithNuma:2 withNumb:3 withCin:1];
 	[unitTests printEquationWithNuma:9 withNumb:9 withCin:-1];
 	[unitTests printEquationWithNuma:9 withNumb:3 withCin:9];
-	[[DHFullAdderBase10 alloc] initWithNumA:@(9) withNumB:@(6) withCarryIn:nil];
+	(void)[[DHFullAdderBase10 alloc] initWithNumA:@(9) withNumB:@(6) withCarryIn:nil];
 	[unitTests printEquationWithNuma:8 withNumb:3 withCin:99];
 	[unitTests printEquationWithNuma:7 withNumb:7 withCin:4];
 	[unitTests printEquationWithNuma:6 withNumb:6 withCin:2];

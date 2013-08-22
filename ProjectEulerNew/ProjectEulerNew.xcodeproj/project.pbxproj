@@ -109,10 +109,7 @@
 				7F7D756B17BEB9D700B05C0D /* sieve_of_eratosthenes.h */,
 				7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */,
 				7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */,
-				7F6DDB7E17C1513100168225 /* DHHalfAdderBase10.h */,
-				7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */,
-				7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */,
-				7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */,
+				7FFF330D17C689BB00ECE6E0 /* Adders */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -124,6 +121,17 @@
 				7F7D757117BEBC9700B05C0D /* unitTests.m */,
 			);
 			name = unitTests;
+			sourceTree = "<group>";
+		};
+		7FFF330D17C689BB00ECE6E0 /* Adders */ = {
+			isa = PBXGroup;
+			children = (
+				7F6DDB7E17C1513100168225 /* DHHalfAdderBase10.h */,
+				7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */,
+				7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */,
+				7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */,
+			);
+			name = Adders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
