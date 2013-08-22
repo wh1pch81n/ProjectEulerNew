@@ -14,18 +14,11 @@
 		return nil;
 	}
 	//init code
-	@try {
-		[self internalSetNumA:[self checkBoundsOfNum:numa]];
-		[self internalSetNumB:[self checkBoundsOfNum:numb]];
-		[self internalSetCin:[self checkBoundsOfNum:cin]];
-	} @catch (NSException *theException) {
-		if ([[theException name] isEqualToString:kExceptionNilNum] ||
-			[[theException name] isEqualToString:kExceptionNumOutOfBounds]) {
-			NSLog(@"caught a %@", [theException name]);
-		} else {
-			NSLog(@"ignored a %@ exception", theException);
-			@throw;
-		}
+	[self internalSetNumA:[self checkBoundsOfNum:numa]];
+	[self internalSetNumB:[self checkBoundsOfNum:numb]];
+	[self internalSetCin:[self checkBoundsOfNum:cin]];
+	if (!_cin || ![self internalNumA] || ![self internalNumB]) {
+		return nil;
 	}
 	NSInteger sum = [numa integerValue] + [numb integerValue] + [cin integerValue];
 	[self privateSetSolution:@(sum % kBase)];

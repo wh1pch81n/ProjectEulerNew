@@ -42,11 +42,10 @@
 			@throw e;
 		}
 	} @catch (NSException *theException) {
-		NSString *err_str = [NSString stringWithFormat:@"%@ + %@", _numa, _numb];
 		if ([[theException name] isEqualToString:kExceptionNilNum] ||
 			[[theException name] isEqualToString:kExceptionNumOutOfBounds]) {
 			
-			NSLog(@"caught a %@ (%@)", [theException name], err_str);
+			NSLog(@"caught a %@ (%@)", [theException name], num);
 		} else {
 			NSLog(@"ignored a %@ exception", theException);
 			@throw;
