@@ -13,6 +13,6 @@
 }
 - (id)initWithNumber:(NSNumber *)num;
 - (id)initByAddingBigInteger1:(DHBigInteger *)num1 withBigInteger:(DHBigInteger *)num2;
-- (id)initByMultiplyingBigInteger1:(DHBigInteger *)num1 withBigInteger:(DHBigInteger *)num2;
+//- (id)initByMultiplyingBigInteger1:(DHBigInteger *)num1 withBigInteger:(DHBigInteger *)num2;
 - (NSString *)stringFromBigInteger;
 @end
