@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4BCB3217CBDD8A0073ABD3 /* NSNumber+numberAsWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */; };
 		7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */; };
 		7F7D755E17BEB88200B05C0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7D755D17BEB88200B05C0D /* Foundation.framework */; };
 		7F7D756117BEB88200B05C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756017BEB88200B05C0D /* main.m */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F4BCB3017CBDD8A0073ABD3 /* NSNumber+numberAsWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+numberAsWord.h"; sourceTree = "<group>"; };
+		7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+numberAsWord.m"; sourceTree = "<group>"; };
 		7F6DDB7E17C1513100168225 /* DHHalfAdderBase10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHalfAdderBase10.h; sourceTree = "<group>"; };
 		7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHalfAdderBase10.m; sourceTree = "<group>"; };
 		7F7D755A17BEB88200B05C0D /* ProjectEulerNew */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEulerNew; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +136,8 @@
 				7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */,
 				7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */,
 				7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */,
+				7F4BCB3017CBDD8A0073ABD3 /* NSNumber+numberAsWord.h */,
+				7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */,
 			);
 			name = Adders;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				7F7D756117BEB88200B05C0D /* main.m in Sources */,
 				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
 				7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */,
+				7F4BCB3217CBDD8A0073ABD3 /* NSNumber+numberAsWord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
