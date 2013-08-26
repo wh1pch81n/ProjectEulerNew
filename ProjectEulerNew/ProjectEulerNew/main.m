@@ -14,13 +14,17 @@ int main(int argc, const char * argv[])
 
 	@autoreleasepool {
 		//	    [unitTests listOfPrimesUnder100];
-		[unitTests prob16_0_halfAdder];
+		//		[unitTests prob16_0_halfAdder];
+		//		printf("======================\n");
+		//		[unitTests prob16_1_fullAdder];
+		//		printf("======================\n");
+		//		[unitTests prob16_2_bigInteger];
+		//		printf("======================\n");
+		//		[unitTests prob16_3_sumOfDigits];
+		//		printf("======================\n");
+		[unitTests prob17_0_wordFormOfNumbers];
 		printf("======================\n");
-		[unitTests prob16_1_fullAdder];
-		printf("======================\n");
-		[unitTests prob16_2_bigInteger];
-		printf("======================\n");
-		[unitTests prob16_3_sumOfDigits];
+		[unitTests prob17_1_numFrom1to1000];
 	}
     return 0;
 }
