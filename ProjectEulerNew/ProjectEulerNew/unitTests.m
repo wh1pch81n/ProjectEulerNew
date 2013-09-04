@@ -84,6 +84,25 @@
 	NSLog(@"sum of digits of 2^1000 is %ld", total);
 }
 
+
++ (void)prob17_0_wordFormOfNumbers {
+	NSNumber *num = @(4285);
+	NSLog(@"ones place:> %@", [num wordFormOfOnesPlace]);
+	NSLog(@"tens place:> %@", [num wordFormOfTensPlace]);
+	NSLog(@"hundreds place:> %@", [num wordFormOfHundredsPlace]);
+	NSLog(@"thousands place:> %@", [num wordFormOfThousandsPlace]);
+	NSLog(@"full word form:> %@", [num wordFormOfNumber]);
+}
++ (void)prob17_1_numFrom1to1000 {
+	NSInteger total = 0;
+	for (int i = 1; i <= 1000; ++i){
+		NSString *wfn = [@(i) wordFormOfNumber];
+		NSLog(@"%d:> %@", i, wfn);
+		total += [wfn length];
+	}
+	NSLog(@"total: %ld", total);
+}
+
 + (void)prob18_0_smallTriangle {
 	NSString *filePath = @"/Users/derrickho/Desktop/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/smallTriangle";
 	NSString *f = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:nil];

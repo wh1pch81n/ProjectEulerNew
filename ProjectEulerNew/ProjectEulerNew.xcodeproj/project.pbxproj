@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4BCB3217CBDD8A0073ABD3 /* NSNumber+numberAsWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */; };
 		7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B1E3E17D7DE190022E4A4 /* TrianglePaths.m */; };
 		7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */; };
 		7F7D755E17BEB88200B05C0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7D755D17BEB88200B05C0D /* Foundation.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F4BCB3017CBDD8A0073ABD3 /* NSNumber+numberAsWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+numberAsWord.h"; sourceTree = "<group>"; };
+		7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+numberAsWord.m"; sourceTree = "<group>"; };
 		7F4B1E3D17D7DE190022E4A4 /* TrianglePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrianglePaths.h; sourceTree = "<group>"; };
 		7F4B1E3E17D7DE190022E4A4 /* TrianglePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrianglePaths.m; sourceTree = "<group>"; };
 		7F4B1E4117D7E5020022E4A4 /* smallTriangle */ = {isa = PBXFileReference; lastKnownFileType = text; path = smallTriangle; sourceTree = "<group>"; };
