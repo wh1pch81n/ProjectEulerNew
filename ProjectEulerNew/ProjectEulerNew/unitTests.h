@@ -14,4 +14,7 @@
 + (void)prob16_1_fullAdder;
 + (void)prob16_2_bigInteger;
 + (void)prob16_3_sumOfDigits;
++ (void)prob18_0_smallTriangle;
++ (void)prob18_1_medTriangle;
+
 @end

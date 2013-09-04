@@ -12,5 +12,5 @@
 #import "DHHalfAdderBase10.h"
 #import "DHFullAdderBase10.h"
 #import "DHBigInteger.h"
-
+#import "TrianglePaths.h"
 #endif

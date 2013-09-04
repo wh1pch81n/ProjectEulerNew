@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B1E3E17D7DE190022E4A4 /* TrianglePaths.m */; };
 		7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */; };
 		7F7D755E17BEB88200B05C0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7D755D17BEB88200B05C0D /* Foundation.framework */; };
 		7F7D756117BEB88200B05C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756017BEB88200B05C0D /* main.m */; };
@@ -31,6 +32,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F4B1E3D17D7DE190022E4A4 /* TrianglePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrianglePaths.h; sourceTree = "<group>"; };
+		7F4B1E3E17D7DE190022E4A4 /* TrianglePaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrianglePaths.m; sourceTree = "<group>"; };
+		7F4B1E4117D7E5020022E4A4 /* smallTriangle */ = {isa = PBXFileReference; lastKnownFileType = text; path = smallTriangle; sourceTree = "<group>"; };
+		7F4B1E4217D7E5260022E4A4 /* medTriangle */ = {isa = PBXFileReference; lastKnownFileType = text; path = medTriangle; sourceTree = "<group>"; };
 		7F6DDB7E17C1513100168225 /* DHHalfAdderBase10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHalfAdderBase10.h; sourceTree = "<group>"; };
 		7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHalfAdderBase10.m; sourceTree = "<group>"; };
 		7F7D755A17BEB88200B05C0D /* ProjectEulerNew */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEulerNew; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F4B1E4017D7DE230022E4A4 /* TrianglePaths */ = {
+			isa = PBXGroup;
+			children = (
+				7F4B1E3D17D7DE190022E4A4 /* TrianglePaths.h */,
+				7F4B1E3E17D7DE190022E4A4 /* TrianglePaths.m */,
+				7F4B1E4117D7E5020022E4A4 /* smallTriangle */,
+				7F4B1E4217D7E5260022E4A4 /* medTriangle */,
+			);
+			name = TrianglePaths;
+			sourceTree = "<group>";
+		};
 		7F7D755117BEB88200B05C0D = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +125,7 @@
 		7F7D756E17BEB9EA00B05C0D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7F4B1E4017D7DE230022E4A4 /* TrianglePaths */,
 				7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */,
 				7FFF330E17C69A6000ECE6E0 /* sieve */,
 				7FFF330D17C689BB00ECE6E0 /* Adders */,
@@ -210,6 +227,7 @@
 				7FFF331117C69AA800ECE6E0 /* DHBigInteger.m in Sources */,
 				7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */,
 				7F7D756117BEB88200B05C0D /* main.m in Sources */,
+				7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */,
 				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
 				7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */,
 			);
