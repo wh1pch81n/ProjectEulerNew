@@ -150,6 +150,8 @@
 				7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */,
 				7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */,
 				7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */,
+				7F4BCB3017CBDD8A0073ABD3 /* NSNumber+numberAsWord.h */,
+				7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */,
 			);
 			name = Adders;
 			sourceTree = "<group>";
@@ -230,6 +232,7 @@
 				7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */,
 				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
 				7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */,
+				7F4BCB3217CBDD8A0073ABD3 /* NSNumber+numberAsWord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
