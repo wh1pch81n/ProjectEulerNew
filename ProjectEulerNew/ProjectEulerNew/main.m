@@ -25,6 +25,10 @@ int main(int argc, const char * argv[])
 		[unitTests prob17_0_wordFormOfNumbers];
 		printf("======================\n");
 		[unitTests prob17_1_numFrom1to1000];
+		printf("======================\n");
+		[unitTests prob18_0_smallTriangle];
+		printf("======================\n");
+		[unitTests prob18_1_medTriangle];
 	}
     return 0;
 }

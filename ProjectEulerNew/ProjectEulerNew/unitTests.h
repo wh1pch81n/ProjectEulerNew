@@ -16,4 +16,7 @@
 + (void)prob16_3_sumOfDigits;
 + (void)prob17_0_wordFormOfNumbers;
 + (void)prob17_1_numFrom1to1000;
++ (void)prob18_0_smallTriangle;
++ (void)prob18_1_medTriangle;
+
 @end
