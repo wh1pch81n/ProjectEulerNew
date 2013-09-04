@@ -13,5 +13,5 @@
 #import "DHFullAdderBase10.h"
 #import "DHBigInteger.h"
 #import "NSNumber+numberAsWord.h"
-
+#import "TrianglePaths.h"
 #endif

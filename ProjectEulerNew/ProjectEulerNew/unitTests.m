@@ -84,6 +84,7 @@
 	NSLog(@"sum of digits of 2^1000 is %ld", total);
 }
 
+
 + (void)prob17_0_wordFormOfNumbers {
 	NSNumber *num = @(4285);
 	NSLog(@"ones place:> %@", [num wordFormOfOnesPlace]);
@@ -100,5 +101,28 @@
 		total += [wfn length];
 	}
 	NSLog(@"total: %ld", total);
+}
+
++ (void)prob18_0_smallTriangle {
+	NSString *filePath = @"/Users/derrickho/Desktop/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/smallTriangle";
+	NSString *f = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:nil];
+	NSArray *arrRows = [f componentsSeparatedByString:@"\n"];
+	NSMutableArray *tri = [NSMutableArray new];
+	for ( NSString *rowNum in arrRows) {
+		[tri addObject:[[rowNum componentsSeparatedByString:@" "] mutableCopy]];
+	 }
+	TrianglePaths *T = [TrianglePaths new];
+	printf ("%ld\n", [T maxPathSumWIthTriangle:tri]);
+}
++ (void)prob18_1_medTriangle {
+	NSString *filePath = @"/Users/derrickho/Desktop/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/medTriangle";
+	NSString *f = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:nil];
+	NSArray *arrRows = [f componentsSeparatedByString:@"\n"];
+	NSMutableArray *tri = [NSMutableArray new];
+	for ( NSString *rowNum in arrRows) {
+		[tri addObject:[[rowNum componentsSeparatedByString:@" "] mutableCopy]];
+	}
+	TrianglePaths *T = [TrianglePaths new];
+	printf ("%ld\n", [T maxPathSumWIthTriangle:tri]);
 }
 @end
