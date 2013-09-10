@@ -11,7 +11,7 @@
 @interface unitTests : NSObject
 + (void)listOfPrimesUnder100;
 + (void)prob16_0_halfAdder;
-//+ (void)prob16_1_fullAdder;
++ (void)prob16_1_fullAdder;
 //+ (void)prob16_2_bigInteger;
 //+ (void)prob16_3_sumOfDigits;
 + (void)prob17_0_wordFormOfNumbers;
