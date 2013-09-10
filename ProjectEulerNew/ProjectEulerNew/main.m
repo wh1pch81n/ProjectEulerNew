@@ -20,8 +20,8 @@ int main(int argc, const char * argv[])
 		printf("======================\n");
 		[unitTests prob16_2_bigInteger];
 		printf("======================\n");
-		//		[unitTests prob16_3_sumOfDigits];
-		//		printf("======================\n");
+		[unitTests prob16_3_sumOfDigits];
+		printf("======================\n");
 		//		[unitTests prob17_0_wordFormOfNumbers];
 		//		printf("======================\n");
 		//		[unitTests prob17_1_numFrom1to1000];

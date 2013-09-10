@@ -54,8 +54,8 @@
 	DHFullAdderBase10 *FA = nil;
 	NSMutableArray *newBigNum = [NSMutableArray new];
 	for (NSInteger i = 0; i < max; ++i) {
-		NSInteger numa = [[[self bigNumber] objectAtIndex:i] solution];
-		NSInteger numb = [[[b bigNumber] objectAtIndex:i] solution];
+		NSInteger numa = (self.bigNumber.count > i)?[[[self bigNumber] objectAtIndex:i] solution]: 0;
+		NSInteger numb = (b.bigNumber.count > i)?[[[b bigNumber] objectAtIndex:i] solution]: 0;
 		NSInteger cin = [FA cout]; //the first iteration will ahve FA equal nil which should set cin as zero
 		FA = [[DHFullAdderBase10 alloc] initWithNumA:numa withNumB:numb  withCarryIn:cin];
 		[newBigNum addObject:FA];
@@ -71,5 +71,13 @@
 	id newInstance = [[[self class] alloc] init];
 	[newInstance setBigNumber:b];
 	return newInstance;
+}
+
+- (NSUInteger)numDigits {
+	return [[self bigNumber] count];
+}
+
+- (NSUInteger)digitAtIndex:(NSUInteger)index {
+	return [[self bigNumber][index] solution];
 }
 @end
