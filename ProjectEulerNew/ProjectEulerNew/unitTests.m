@@ -49,8 +49,9 @@
 	[unitTests printEquationWithNuma:5 withNumb:5 withCin:8];
 }
 + (void)prob16_2_bigInteger {
-	DHBigInteger *big = [[DHBigInteger alloc] initWithNumber:914325237];
-	NSLog(@"create big number: %s", [big stringFromBigInteger].UTF8String);
+	NSInteger num = 914345645684525237;
+	DHBigInteger *big = [[DHBigInteger alloc] initWithNumber:num];
+	NSLog(@"create big number(%ld): %s", num, [big stringFromBigInteger].UTF8String);
 }
 //+ (void)prob16_3_sumOfDigits {
 //	DHBigInteger *numa, *numb, *sum;
