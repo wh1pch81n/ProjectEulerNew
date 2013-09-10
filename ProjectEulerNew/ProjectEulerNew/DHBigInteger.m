@@ -9,53 +9,67 @@
 #import "DHBigInteger.h"
 #import "DHFullAdderBase10.h"
 
-//@implementation DHBigInteger
-//- (id)initWithNumber:(NSNumber *)num {
-//	if( self = [super init]) {
-//		//the zeroth digit of the number corresponds to the index zero of the array.
-//		NSMutableArray *arrOfFA = [NSMutableArray new];
-//		NSInteger n = [num integerValue];
-//		for(;n; n /= 10) {
-//			int LSD = n % 10;
-//			DHFullAdderBase10 *FA = [[DHFullAdderBase10 alloc] initWithNumA: @(LSD)];
-//			[arrOfFA addObject:FA];
-//		}
-//		_number = arrOfFA;
-//		return self;
-//	}
-//	return nil;
-//}
-//- (id)init {
-//	return [self initWithNumber:@(0)];
-//}
-//- (NSString *)stringFromBigInteger {
-//	NSMutableString *mStr = [NSMutableString new];
-//	for (int i = (int)_number.count -1; i >= 0; --i) {
-//		[mStr appendString:[[[_number objectAtIndex:i] solution] stringValue]];
-//	}
-//	return mStr;
-//}
-//- (id)initByAddingBigInteger1:(DHBigInteger *)num1 withBigInteger:(DHBigInteger *)num2 {
-//	if (self = [super init]) {
-//		NSInteger max1 = [num1->_number count];
-//		NSInteger max2 = [num2->_number count];
-//		NSMutableArray *arrOfFA = [NSMutableArray new];
-//		for (NSInteger i = 0; i < max1 || i <max2; ++i) {
-//			NSInteger numa = !(i < max1)? 0: [[num1->_number[i] solution] integerValue];
-//			NSInteger numb = !(i < max2)? 0: [[num2->_number[i] solution] integerValue];
-//			NSInteger cin = ( i == 0)? 0: [[arrOfFA[i-1] cout] integerValue];
-//			DHFullAdderBase10 *FA = [[DHFullAdderBase10 alloc] initWithNumA:@(numa)
-//																   withNumB:@(numb)
-//																withCarryIn:@(cin)];
-//			[arrOfFA addObject:FA];
-//		}
-//		int carry = [[[arrOfFA lastObject] cout] intValue];
-//		if ( carry > 0) {
-//			[arrOfFA addObject:[[DHFullAdderBase10 alloc] initWithNumA:@(carry)]];
-//		}
-//		_number = arrOfFA;
-//		return self;
-//	}
-//	return nil;
-//}
-//@end
+@interface DHBigInteger ()
+@property (strong, nonatomic)NSMutableArray *bigNumber;
+@end;
+
+@implementation DHBigInteger
+@synthesize bigNumber = _bigNumber;
+
+- (id)initWithNumber:(NSInteger)num {
+	if( self = [super init]) {
+		//the zeroth digit of the number corresponds to the index zero of the array.
+		NSMutableArray *arrOfFA = [NSMutableArray new];
+		DHFullAdderBase10 *FA = nil;
+		do {
+			NSInteger LSD = num %kBase;
+			FA = [DHFullAdderBase10 new];
+			[FA setNuma:LSD];
+			[arrOfFA addObject:FA];
+			num /= kBase;
+		} while (num);
+		[self setBigNumber:arrOfFA];
+		return self;
+	}
+	return nil;
+}
+
+- (id)init {
+	return [self initWithNumber:0];
+}
+
+- (NSString *)stringFromBigInteger {
+	NSMutableString *mStr = [NSMutableString new];
+	for (int i = (int)[[self bigNumber] count] -1; i >= 0; --i) {
+		[mStr appendFormat:@"%ld", [[[self bigNumber] objectAtIndex:i] solution]];
+	}
+	return mStr;
+}
+
+- (DHBigInteger *)plus:(DHBigInteger *)b {
+	if (!b) { return self;}
+	NSInteger aSize = [[self bigNumber] count];
+	NSInteger bSize = [[b bigNumber] count];
+	NSInteger max = (aSize > bSize)? aSize: bSize;
+	DHFullAdderBase10 *FA = nil;
+	NSMutableArray *newBigNum = [NSMutableArray new];
+	for (NSInteger i = 0; i < max; ++i) {
+		NSInteger numa = [[[self bigNumber] objectAtIndex:i] solution];
+		NSInteger numb = [[[b bigNumber] objectAtIndex:i] solution];
+		NSInteger cin = [FA cout]; //the first iteration will ahve FA equal nil which should set cin as zero
+		FA = [[DHFullAdderBase10 alloc] initWithNumA:numa withNumB:numb  withCarryIn:cin];
+		[newBigNum addObject:FA];
+	}
+	if ([FA cout] > 0) {
+		[newBigNum addObject:[[DHFullAdderBase10 alloc] initWithNumA:[FA cout] withNumB:0]];
+	}
+	
+	return [self bigIntegerWithArray:newBigNum];
+}
+
+- (DHBigInteger *)bigIntegerWithArray:(NSMutableArray *)b {
+	id newInstance = [[[self class] alloc] init];
+	[newInstance setBigNumber:b];
+	return newInstance;
+}
+@end

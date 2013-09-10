@@ -48,10 +48,10 @@
 	[unitTests printEquationWithNuma:6 withNumb:6 withCin:2];
 	[unitTests printEquationWithNuma:5 withNumb:5 withCin:8];
 }
-//+ (void)prob16_2_bigInteger {
-//	DHBigInteger *big = [[DHBigInteger alloc] initWithNumber:@(914325237)];
-//	NSLog(@"create big number: %s", [big stringFromBigInteger].UTF8String);
-//}
++ (void)prob16_2_bigInteger {
+	DHBigInteger *big = [[DHBigInteger alloc] initWithNumber:914325237];
+	NSLog(@"create big number: %s", [big stringFromBigInteger].UTF8String);
+}
 //+ (void)prob16_3_sumOfDigits {
 //	DHBigInteger *numa, *numb, *sum;
 //	numa = [[DHBigInteger alloc] initWithNumber:@(9)];
