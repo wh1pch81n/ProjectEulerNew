@@ -67,6 +67,40 @@
 	return [self bigIntegerWithArray:newBigNum];
 }
 
+//one digit multiplies by one digit
+- (DHBigInteger *)singleMult:(DHBigInteger *)b {
+	DHBigInteger *total = [[DHBigInteger alloc] initWithNumber:0];
+	for (; ![b isEqualToZero]; b = [b plus:[[DHBigInteger alloc] initWithNumber:-1]]) {
+		total = [total plus:self];
+	}
+	return total;
+}
+
+- (BOOL)isEqualToZero {
+	return [[self stringFromBigInteger] integerValue] == 0;
+}
+#warning this method is buggy when multiplying number larger than 9
+- (DHBigInteger *)times:(DHBigInteger *)b {
+	DHBigInteger *sum = [[DHBigInteger alloc] initWithNumber:0];
+	DHBigInteger *shiftedX = [self bigIntegerFromBigInteger:self];
+	NSInteger bitWidth = (self.bigNumber.count > b.bigNumber.count)? self.bigNumber.count: b.bigNumber.count;
+	for (NSInteger j = 0; j < bitWidth; ++j) {
+		if ((j < [[b bigNumber] count])&& [[[b bigNumber] objectAtIndex:j] solution]) {
+			sum = [b singleMult:shiftedX];
+		}
+		shiftedX = [shiftedX plus:
+					[shiftedX plus:
+					 [shiftedX plus:
+					  [shiftedX plus:
+					   [shiftedX plus:
+						[shiftedX plus:
+						 [shiftedX plus:
+						  [shiftedX plus:
+						   shiftedX]]]]]]]];
+	}
+	return sum;
+}
+
 - (DHBigInteger *)bigIntegerWithArray:(NSMutableArray *)b {
 	id newInstance = [[[self class] alloc] init];
 	[newInstance setBigNumber:b];
@@ -79,5 +113,11 @@
 
 - (NSUInteger)digitAtIndex:(NSUInteger)index {
 	return [[self bigNumber][index] solution];
+}
+
+- (id)bigIntegerFromBigInteger:(DHBigInteger *)b {
+	id newInstance = [[[self class] alloc] init];
+	[newInstance setBigNumber:[[b bigNumber] mutableCopy]];
+	return newInstance;
 }
 @end

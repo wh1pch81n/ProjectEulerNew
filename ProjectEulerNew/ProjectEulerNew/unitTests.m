@@ -81,7 +81,19 @@
 	}
 	NSLog(@"sum of digits of 2^1000 is %ld", total);
 }
-
++ (void)print16_4:(NSUInteger)numa :(NSUInteger)numb {
+	DHBigInteger *a = [[DHBigInteger alloc] initWithNumber:numa];
+	DHBigInteger *b = [[DHBigInteger alloc] initWithNumber:numb];
+	DHBigInteger *s = [a times:b];
+	NSLog(@"%@ * %@ = %@", [a stringFromBigInteger], [b stringFromBigInteger], [s stringFromBigInteger]);
+}
++ (void)prob16_4_multDigits {
+	[unitTests print16_4:9 :5];
+	[unitTests print16_4:9 :9];
+	[unitTests print16_4:9 :0];
+	[unitTests print16_4:0 :9];
+	[unitTests print16_4:3 :10];
+}
 
 + (void)prob17_0_wordFormOfNumbers {
 	NSNumber *num = @(4285);
