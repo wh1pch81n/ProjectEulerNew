@@ -93,6 +93,11 @@
 	[unitTests print16_4:9 :0];
 	[unitTests print16_4:0 :9];
 	[unitTests print16_4:3 :10];
+	[unitTests print16_4:1127 :3];
+	[unitTests print16_4:3 :1127];
+	[unitTests print16_4:27245 :6];
+	[unitTests print16_4:0 :0];
+	[unitTests print16_4:91 :93];
 }
 
 + (void)prob17_0_wordFormOfNumbers {

@@ -66,11 +66,14 @@
 	
 	return [self bigIntegerWithArray:newBigNum];
 }
-
-//one digit multiplies by one digit
-- (DHBigInteger *)singleMult:(DHBigInteger *)b {
+//fast version
+/*
+ 	//TODO: access individual digits so that you can multipy their solutions with the multiplier and recreate a big integer.
+ */
+//slow version
+- (DHBigInteger *)timesUInteger:(NSUInteger)multiplier {
 	DHBigInteger *total = [[DHBigInteger alloc] initWithNumber:0];
-	for (; ![b isEqualToZero]; b = [b plus:[[DHBigInteger alloc] initWithNumber:-1]]) {
+	for (int i = 0; i < multiplier; ++i) {
 		total = [total plus:self];
 	}
 	return total;
@@ -79,24 +82,18 @@
 - (BOOL)isEqualToZero {
 	return [[self stringFromBigInteger] integerValue] == 0;
 }
-#warning this method is buggy when multiplying number larger than 9
+
 - (DHBigInteger *)times:(DHBigInteger *)b {
 	DHBigInteger *sum = [[DHBigInteger alloc] initWithNumber:0];
 	DHBigInteger *shiftedX = [self bigIntegerFromBigInteger:self];
-	NSInteger bitWidth = (self.bigNumber.count > b.bigNumber.count)? self.bigNumber.count: b.bigNumber.count;
+
+	NSInteger bitWidth = b.bigNumber.count;
 	for (NSInteger j = 0; j < bitWidth; ++j) {
-		if ((j < [[b bigNumber] count])&& [[[b bigNumber] objectAtIndex:j] solution]) {
-			sum = [b singleMult:shiftedX];
+		NSInteger digit = [[[b bigNumber] objectAtIndex:j] solution];
+		if (digit) {
+			sum = [sum plus:[shiftedX timesUInteger:digit]];
 		}
-		shiftedX = [shiftedX plus:
-					[shiftedX plus:
-					 [shiftedX plus:
-					  [shiftedX plus:
-					   [shiftedX plus:
-						[shiftedX plus:
-						 [shiftedX plus:
-						  [shiftedX plus:
-						   shiftedX]]]]]]]];
+		shiftedX = [shiftedX timesUInteger:10];
 	}
 	return sum;
 }

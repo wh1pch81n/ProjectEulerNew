@@ -14,6 +14,7 @@
 - (id)initWithNumber:(NSInteger)num;
 - (DHBigInteger *)plus:(DHBigInteger *)b;
 - (DHBigInteger *)times:(DHBigInteger *)b;
+- (DHBigInteger *)timesUInteger:(NSUInteger)multiplier;
 - (NSString *)stringFromBigInteger;
 - (NSUInteger)numDigits;
 - (NSUInteger)digitAtIndex:(NSUInteger)index;
