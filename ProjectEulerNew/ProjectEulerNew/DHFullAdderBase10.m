@@ -9,24 +9,21 @@
 #import "DHFullAdderBase10.h"
 
 @implementation DHFullAdderBase10
-- (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb withCarryIn:(NSNumber *)cin{
-	if (!(self = [super initWithNumA:numa withNumB:numb]) || !(_cin = [self checkBoundsOfNum:cin])) {
-		return nil;
+@synthesize cin = _cin;
+
+- (id)initWithNumA:(NSInteger)numa withNumB:(NSInteger)numb withCarryIn:(NSInteger)cin{
+	if (self = [super initWithNumA:numa withNumB:numb]) {
+		[self setCin:cin%kBase];
 	}
-	//init code
 	return self;
 }
-- (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb {
-	return [self initWithNumA:numa withNumB:numb withCarryIn:@(0)];
+
+- (NSInteger)solution {
+	return ([self numa] + [self numb] + [self cin]) %kBase;
 }
-- (id)initWithNumA:(NSNumber *)numa {
-	return [self initWithNumA:numa withNumB:@(0) withCarryIn:@(0)];
+
+- (NSInteger)cout {
+	return ([self numa] + [self numb] + [self cin]) /kBase;
 }
-- (id)init {
-	return [self initWithNumA:@(0) withNumB:@(0) withCarryIn:@(0)];
-}
-#pragma mark sum of inputs
-- (NSInteger)sumOfInputs {
-	return [super sumOfInputs] + [_cin integerValue];
-}
+
 @end

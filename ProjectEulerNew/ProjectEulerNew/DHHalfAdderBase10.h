@@ -7,28 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#define kBase 10
-#define kExceptionNilNum @"NilNumberException"
-#define kExceptionNilNumReason @"Number can not be nil"
-#define kExceptionNumOutOfBounds @"NumberOutOfBoundsException"
-#define kExceptionNumOutOfBoundsReason @" 0 <= Num <= 9"
 
-/*All subclasses are required to implemente these methods listed in protocol*/
-@protocol DHAdder_protocol <NSObject>
-@required
-#pragma mark - sum of inputs
-- (NSInteger)sumOfInputs;
-@end
+extern const NSInteger kBase;
 
-@interface DHHalfAdderBase10 : NSObject <DHAdder_protocol>{
-	NSNumber *_numa;
-	NSNumber *_numb;
+@interface DHHalfAdderBase10 : NSObject {
+	NSInteger _numa;
+	NSInteger _numb;
 }
-- (id)initWithNumA:(NSNumber *)numa withNumB:(NSNumber *)numb;
-- (id)initWithNumA:(NSNumber *)numa;
-- (NSNumber *)checkBoundsOfNum:(NSNumber *)num;
+@property NSInteger numa;
+@property NSInteger numb;
+- (id)initWithNumA:(NSInteger)numa withNumB:(NSInteger)numb;
 #pragma mark - outputs
-- (NSNumber *)solution;
-- (NSNumber *)cout;
+- (NSInteger)solution;
+- (NSInteger)cout;
 @end
 
