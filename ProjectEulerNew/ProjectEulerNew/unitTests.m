@@ -140,4 +140,21 @@
 	TrianglePaths *T = [TrianglePaths new];
 	printf ("%ld\n", [T maxPathSumWIthTriangle:tri]);
 }
++ (DHBigInteger *)factorial:(NSUInteger)num {
+	if (num >1) {
+		return [[[DHBigInteger alloc] initWithNumber:num] times:[self factorial:num-1]];
+	}
+	return [[DHBigInteger alloc] initWithNumber:1];
+}
++ (void)prob20_0_FactorialDigitSum {
+	NSUInteger num = 100;
+	NSString *wordNum = [[self factorial:num] stringFromBigInteger] ;
+	printf("%ld! = %s\n", num, wordNum.UTF8String);
+	NSInteger total = 0;
+	for (int i = 0; i < wordNum.length; ++i) {
+		printf("%d + ", [wordNum characterAtIndex:i]-'0');
+		total += [wordNum characterAtIndex:i] - '0';
+	}
+	printf("= %ld", total);
+}
 @end

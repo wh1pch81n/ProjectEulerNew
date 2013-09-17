@@ -33,6 +33,8 @@ int main(int argc, const char * argv[])
 		 printf("======================\n");
 		 [unitTests prob18_1_medTriangle];
 		 */
+		printf("======================\n");
+		[unitTests prob20_0_FactorialDigitSum];
 	}
     return 0;
 }

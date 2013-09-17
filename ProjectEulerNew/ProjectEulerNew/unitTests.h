@@ -19,5 +19,5 @@
 + (void)prob17_1_numFrom1to1000;
 + (void)prob18_0_smallTriangle;
 + (void)prob18_1_medTriangle;
-
++ (void)prob20_0_FactorialDigitSum;
 @end
