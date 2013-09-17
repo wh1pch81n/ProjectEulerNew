@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DHBigInteger : NSObject {
-	NSArray *_number;
+@interface DHBigInteger : NSObject <NSCopying> {
+	NSMutableArray *_bigNumber;
 }
-- (id)initWithNumber:(NSNumber *)num;
-- (id)initByAddingBigInteger1:(DHBigInteger *)num1 withBigInteger:(DHBigInteger *)num2;
-//- (id)initByMultiplyingBigInteger1:(DHBigInteger *)num1 withBigInteger:(DHBigInteger *)num2;
+- (id)initWithNumber:(NSInteger)num;
+- (DHBigInteger *)plus:(DHBigInteger *)b;
+- (DHBigInteger *)times:(DHBigInteger *)b;
+- (DHBigInteger *)timesUInteger:(NSUInteger)multiplier;
 - (NSString *)stringFromBigInteger;
+- (NSUInteger)numDigits;
+- (NSUInteger)digitAtIndex:(NSUInteger)index;
+- (id)bigIntegerFromBigInteger:(DHBigInteger *)b;
 @end
