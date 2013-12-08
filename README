@@ -1,4 +1,4 @@
-Holds all the possible solutions to Project Euler questions.
+Holds my solutions to Project Euler questions.
 
 Is divided into classes that can be used by the project.
 and will have Testing functions that make use of the code
