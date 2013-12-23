@@ -10,7 +10,9 @@
 
 @implementation DHAmicableNumber
 - (BOOL) isAmicable:(NSInteger)num {
-	return (num == [self sumDivisorsOf:[self sumDivisorsOf:num]]);
+	NSInteger a = [self sumDivisorsOf:num];
+	NSInteger b = [self sumDivisorsOf:a];
+	return (num == b) && a != b;
 }
 	
 -(NSInteger)sumDivisorsOf:(NSInteger)num {
