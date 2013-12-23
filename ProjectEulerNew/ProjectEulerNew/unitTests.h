@@ -20,4 +20,6 @@
 + (void)prob18_0_smallTriangle;
 + (void)prob18_1_medTriangle;
 + (void)prob20_0_FactorialDigitSum;
++ (void)prob21_0_isAmicableNumber;
++ (void)prob21_1_sumOfAllAmicableUnder10000;
 @end

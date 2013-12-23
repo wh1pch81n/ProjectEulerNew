@@ -157,4 +157,30 @@
 	}
 	printf("= %ld", total);
 }
+	
++ (void)prob21_0_isAmicableNumber {
+	DHAmicableNumber *an = [DHAmicableNumber new];
+	if ([an isAmicable:220]) {
+		printf("Is Amicable\n");
+	} else {
+		printf("NOT Amicable\n");
+	}
+	if ([an isAmicable:284]) {
+		printf("Is Amicable\n");
+	} else {
+		printf("NOT Amicable\n");
+	}
+}
+
++ (void)prob21_1_sumOfAllAmicableUnder10000 {
+	DHAmicableNumber *an = [DHAmicableNumber new];
+	NSInteger total = 0;
+	for (NSInteger i = 1; i < 10000; ++i) {
+		if([an isAmicable:i]){
+			printf("%ld\n", i);
+			total += i;
+		}
+	}
+	printf("Sum Of all Amicable Numbers Under 10,000: %ld\n", total);
+}
 @end
