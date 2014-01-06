@@ -10,50 +10,57 @@
 #import "HeaderAPI.h"
 
 @implementation unitTests
-+ (void)listOfPrimesUnder100 {
+
+- (void)listOfPrimesUnder100 {
 	DHsieveOfEratosthenes *s = [DHsieveOfEratosthenes new];
 	NSLog(@"\nList of Primes Under 100%@", [s generateSieveUpTo:@(100)]);
 	NSLog(@"\nLargest prime less than 300 %@", [s getPrimeNumberLessThan:@(300)]);
 }
-+ (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b {
+
+- (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b {
 	DHHalfAdderBase10 *hf = [[DHHalfAdderBase10 alloc] initWithNumA:a withNumB:b];
 	if(hf) {
 		NSLog(@"%ld + %ld =  %ld:C %ld:S", a, b, [hf cout], [hf solution]);
 	}
 }
-+ (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b withCin:(NSInteger)c{
+
+- (void)printEquationWithNuma:(NSInteger)a withNumb:(NSInteger)b withCin:(NSInteger)c{
 	DHHalfAdderBase10 *hf = [[DHFullAdderBase10 alloc] initWithNumA:a withNumB:b withCarryIn:c];
 	if(hf) {
 		NSLog(@"%ld + %ld + %ld = %ld:C %ld:S", a, b, c, [hf cout], [hf solution]);
 	}
 }
-+ (void)prob16_0_halfAdder {
-	[unitTests printEquationWithNuma:2 withNumb:3];
-	[unitTests printEquationWithNuma:9 withNumb:9];
-	[unitTests printEquationWithNuma:9 withNumb:3];
-	[unitTests printEquationWithNuma:0 withNumb:0];
-	[unitTests printEquationWithNuma:-2 withNumb:3];
-	[unitTests printEquationWithNuma:-8 withNumb:-3];
-	[unitTests printEquationWithNuma:86 withNumb:3];
-	[unitTests printEquationWithNuma:7 withNumb:7];
-	[unitTests printEquationWithNuma:6 withNumb:6];
-	[unitTests printEquationWithNuma:5 withNumb:5];
+
+- (void)prob16_0_halfAdder {
+	[self printEquationWithNuma:2 withNumb:3];
+	[self printEquationWithNuma:9 withNumb:9];
+	[self printEquationWithNuma:9 withNumb:3];
+	[self printEquationWithNuma:0 withNumb:0];
+	[self printEquationWithNuma:-2 withNumb:3];
+	[self printEquationWithNuma:-8 withNumb:-3];
+	[self printEquationWithNuma:86 withNumb:3];
+	[self printEquationWithNuma:7 withNumb:7];
+	[self printEquationWithNuma:6 withNumb:6];
+	[self printEquationWithNuma:5 withNumb:5];
 }
-+ (void)prob16_1_fullAdder {
-	[unitTests printEquationWithNuma:2 withNumb:3 withCin:1];
-	[unitTests printEquationWithNuma:9 withNumb:9 withCin:-1];
-	[unitTests printEquationWithNuma:9 withNumb:3 withCin:9];
-	[unitTests printEquationWithNuma:8 withNumb:3 withCin:99];
-	[unitTests printEquationWithNuma:7 withNumb:7 withCin:4];
-	[unitTests printEquationWithNuma:6 withNumb:6 withCin:2];
-	[unitTests printEquationWithNuma:5 withNumb:5 withCin:8];
+
+- (void)prob16_1_fullAdder {
+	[self printEquationWithNuma:2 withNumb:3 withCin:1];
+	[self printEquationWithNuma:9 withNumb:9 withCin:-1];
+	[self printEquationWithNuma:9 withNumb:3 withCin:9];
+	[self printEquationWithNuma:8 withNumb:3 withCin:99];
+	[self printEquationWithNuma:7 withNumb:7 withCin:4];
+	[self printEquationWithNuma:6 withNumb:6 withCin:2];
+	[self printEquationWithNuma:5 withNumb:5 withCin:8];
 }
-+ (void)prob16_2_bigInteger {
+
+- (void)prob16_2_bigInteger {
 	NSInteger num = 914345645684525237;
 	DHBigInteger *big = [[DHBigInteger alloc] initWithNumber:num];
 	NSLog(@"create big number(%ld): %s", num, [big stringFromBigInteger].UTF8String);
 }
-+ (void)prob16_3_sumOfDigits {
+
+- (void)prob16_3_sumOfDigits {
 	DHBigInteger *numa, *numb, *sum;
 	numa = [[DHBigInteger alloc] initWithNumber:9];
 	sum = [numa plus:numa];
@@ -81,26 +88,28 @@
 	}
 	NSLog(@"sum of digits of 2^1000 is %ld", total);
 }
-+ (void)print16_4:(NSUInteger)numa :(NSUInteger)numb {
+
+- (void)print16_4:(NSUInteger)numa :(NSUInteger)numb {
 	DHBigInteger *a = [[DHBigInteger alloc] initWithNumber:numa];
 	DHBigInteger *b = [[DHBigInteger alloc] initWithNumber:numb];
 	DHBigInteger *s = [a times:b];
 	NSLog(@"%@ * %@ = %@", [a stringFromBigInteger], [b stringFromBigInteger], [s stringFromBigInteger]);
 }
-+ (void)prob16_4_multDigits {
-	[unitTests print16_4:9 :5];
-	[unitTests print16_4:9 :9];
-	[unitTests print16_4:9 :0];
-	[unitTests print16_4:0 :9];
-	[unitTests print16_4:3 :10];
-	[unitTests print16_4:1127 :3];
-	[unitTests print16_4:3 :1127];
-	[unitTests print16_4:27245 :6];
-	[unitTests print16_4:0 :0];
-	[unitTests print16_4:91 :93];
+
+- (void)prob16_4_multDigits {
+	[self print16_4:9 :5];
+	[self print16_4:9 :9];
+	[self print16_4:9 :0];
+	[self print16_4:0 :9];
+	[self print16_4:3 :10];
+	[self print16_4:1127 :3];
+	[self print16_4:3 :1127];
+	[self print16_4:27245 :6];
+	[self print16_4:0 :0];
+	[self print16_4:91 :93];
 }
 
-+ (void)prob17_0_wordFormOfNumbers {
+- (void)prob17_0_wordFormOfNumbers {
 	NSNumber *num = @(4285);
 	NSLog(@"ones place:> %@", [num wordFormOfOnesPlace]);
 	NSLog(@"tens place:> %@", [num wordFormOfTensPlace]);
@@ -108,7 +117,8 @@
 	NSLog(@"thousands place:> %@", [num wordFormOfThousandsPlace]);
 	NSLog(@"full word form:> %@", [num wordFormOfNumber]);
 }
-+ (void)prob17_1_numFrom1to1000 {
+
+- (void)prob17_1_numFrom1to1000 {
 	NSInteger total = 0;
 	for (int i = 1; i <= 1000; ++i){
 		NSString *wfn = [@(i) wordFormOfNumber];
@@ -118,7 +128,7 @@
 	NSLog(@"total: %ld", total);
 }
 
-+ (void)prob18_0_smallTriangle {
+- (void)prob18_0_smallTriangle {
 	NSString *filePath = @"/Users/derrickho/Desktop/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/smallTriangle";
 	NSString *f = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:nil];
 	NSArray *arrRows = [f componentsSeparatedByString:@"\n"];
@@ -129,7 +139,8 @@
 	TrianglePaths *T = [TrianglePaths new];
 	printf ("%ld\n", [T maxPathSumWIthTriangle:tri]);
 }
-+ (void)prob18_1_medTriangle {
+
+- (void)prob18_1_medTriangle {
 	NSString *filePath = @"/Users/derrickho/Desktop/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/medTriangle";
 	NSString *f = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:nil];
 	NSArray *arrRows = [f componentsSeparatedByString:@"\n"];
@@ -140,13 +151,15 @@
 	TrianglePaths *T = [TrianglePaths new];
 	printf ("%ld\n", [T maxPathSumWIthTriangle:tri]);
 }
-+ (DHBigInteger *)factorial:(NSUInteger)num {
+
+- (DHBigInteger *)factorial:(NSUInteger)num {
 	if (num >1) {
 		return [[[DHBigInteger alloc] initWithNumber:num] times:[self factorial:num-1]];
 	}
 	return [[DHBigInteger alloc] initWithNumber:1];
 }
-+ (void)prob20_0_FactorialDigitSum {
+
+- (void)prob20_0_FactorialDigitSum {
 	NSUInteger num = 100;
 	NSString *wordNum = [[self factorial:num] stringFromBigInteger] ;
 	printf("%ld! = %s\n", num, wordNum.UTF8String);
@@ -158,7 +171,7 @@
 	printf("= %ld", total);
 }
 	
-+ (void)prob21_0_isAmicableNumber {
+- (void)prob21_0_isAmicableNumber {
 	DHAmicableNumber *an = [DHAmicableNumber new];
 	if ([an isAmicable:220]) {
 		printf("Is Amicable\n");
@@ -172,7 +185,7 @@
 	}
 }
 
-+ (void)prob21_1_sumOfAllAmicableUnder10000 {
+- (void)prob21_1_sumOfAllAmicableUnder10000 {
 	DHAmicableNumber *an = [DHAmicableNumber new];
 	NSInteger total = 0;
 	for (NSInteger i = 1; i < 10000; ++i) {
@@ -183,4 +196,11 @@
 	}
 	printf("Sum Of all Amicable Numbers Under 10,000: %ld\n", total);
 }
+
+- (void)prob22_0_NameScore {
+	NSString *fileName = @"/Users/derrickho/Documents/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/names.txt";
+	NSArray *arr = [NameScores arrayOfNamesFromFile:fileName willSort:YES];
+	printf("Total Namescore: %ld\n", [NameScores calcTotalScore:arr]);
+}
+
 @end
