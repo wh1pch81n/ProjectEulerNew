@@ -117,10 +117,8 @@
 			children = (
 				7F7D756F17BEBA0D00B05C0D /* unitTests */,
 				7F7D756E17BEB9EA00B05C0D /* API */,
-				7F7D756017BEB88200B05C0D /* main.m */,
-				7F497E9917FCEE5B00B98CCC /* NameScores.h */,
-				7F497E9A17FCEE5B00B98CCC /* NameScores.m */,
 				7F7D756417BEB88200B05C0D /* ProjectEulerNew.1 */,
+				7F7D756017BEB88200B05C0D /* main.m */,
 				7F7D756217BEB88200B05C0D /* Supporting Files */,
 			);
 			path = ProjectEulerNew;
@@ -138,6 +136,7 @@
 		7F7D756E17BEB9EA00B05C0D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7FF9AFD9187A79190076ADEB /* NameScores */,
 				7FD405611868F15800A42D14 /* AmicableNumber */,
 				7F4B1E4017D7DE230022E4A4 /* TrianglePaths */,
 				7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */,
@@ -164,6 +163,15 @@
 				7FD405631868F18700A42D14 /* DHAmicableNumber.m */,
 			);
 			name = AmicableNumber;
+			sourceTree = "<group>";
+		};
+		7FF9AFD9187A79190076ADEB /* NameScores */ = {
+			isa = PBXGroup;
+			children = (
+				7F497E9917FCEE5B00B98CCC /* NameScores.h */,
+				7F497E9A17FCEE5B00B98CCC /* NameScores.m */,
+			);
+			name = NameScores;
 			sourceTree = "<group>";
 		};
 		7FFF330D17C689BB00ECE6E0 /* Adders */ = {
