@@ -20,7 +20,7 @@
 	NSString *fileContents = [NSString stringWithContentsOfFile:fileName
 													   encoding:NSASCIIStringEncoding error:nil];
 	NSMutableArray *marr = [NSMutableArray new];
-	NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:@"\"([A-Z]*)\"(,)?"
+	NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:@"[^\"]([A-Z]*)[^\"(,)?]"
 																		   options:NSRegularExpressionCaseInsensitive
 																			 error:nil];
 	[regEx enumerateMatchesInString:fileContents options:0

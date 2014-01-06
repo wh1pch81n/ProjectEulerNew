@@ -22,4 +22,5 @@
 + (void)prob20_0_FactorialDigitSum;
 + (void)prob21_0_isAmicableNumber;
 + (void)prob21_1_sumOfAllAmicableUnder10000;
++ (void)prob22_0_NameScore;
 @end

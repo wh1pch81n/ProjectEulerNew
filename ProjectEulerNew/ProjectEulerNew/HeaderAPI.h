@@ -15,4 +15,5 @@
 #import "NSNumber+numberAsWord.h"
 #import "TrianglePaths.h"
 #import "DHAmicableNumber.h"
+#import "NameScores.h"
 #endif

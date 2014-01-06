@@ -50,6 +50,8 @@ int main(int argc, const char * argv[])
 		//printf("======================\n");
 		//[unitTests prob21_1_sumOfAllAmicableUnder10000];
 		
+		printf("======================\n");
+		[unitTests prob22_0_NameScore];
 	}
     return 0;
 }

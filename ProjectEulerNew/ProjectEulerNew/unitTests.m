@@ -183,4 +183,10 @@
 	}
 	printf("Sum Of all Amicable Numbers Under 10,000: %ld\n", total);
 }
+
++ (void)prob22_0_NameScore {
+	NSString *fileName = @"/Users/derrickho/Documents/ProjectEulerNew/ProjectEulerNew/ProjectEulerNew/names.txt";
+	NSArray *arr = [NameScores arrayOfNamesFromFile:fileName willSort:YES];
+	printf("Total Namescore: %ld\n", [NameScores calcTotalScore:arr]);
+}
 @end
