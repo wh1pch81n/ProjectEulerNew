@@ -10,7 +10,7 @@
 
 @interface FactorialGen : NSObject {
 	NSMutableArray *arrTree;
-	NSMutableString *runningPerm;
+	//NSMutableString *runningPerm;
 }
 - (id)init;
 - (id)initWithString:(NSString *)str;

@@ -17,26 +17,25 @@
 - (id)initWithString:(NSString *)str {
 	if(self = [super init]) {
 		self->arrTree = [NSMutableArray new];
-		self->runningPerm = [NSMutableString new];
-		[self generateTree:str];
+		//self->runningPerm = [NSMutableString new];
+		[self generateTree:str :nil];
 	}
 	return self;
 }
 
-- (void)generateTree:(NSString *)str {
+- (void)generateTree:(NSString *)str :(NSString *)run{
 	if (!str) {
-		[self generateTree:@""];
+		[self generateTree:@"" :nil];
 	} else if ([str isEqualToString:@""]) {
-		if (self->runningPerm.length)
-			[self->arrTree addObject:self->runningPerm];
-		self->runningPerm = [NSMutableString new];
+			[self->arrTree addObject:run];
 		return;
 	}
-	
+
 	for (int i = 0; i < str.length; ++i) {
 		NSString *s = [str stringByReplacingCharactersInRange:NSMakeRange(i, 1) withString:@""];
-		[self->runningPerm appendString:[str substringWithRange:NSMakeRange(i, 1)]];
-		[self generateTree:s];
+	
+		NSString *grow = [NSString stringWithFormat:@"%@%@", run?:@"", [str substringWithRange:NSMakeRange(i, 1)]];
+		[self generateTree:s :grow];
 	}
 }
 

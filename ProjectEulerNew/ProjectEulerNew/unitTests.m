@@ -206,6 +206,9 @@
 - (void)prob24_0_GetPerm {
 	FactorialGen *fg = [[FactorialGen alloc] initWithString:@"012"];
 	NSLog(@"%@",[fg arrayOfPermutations]);
+
+	fg = [[FactorialGen alloc] initWithString:@"1234"];
+	NSLog(@"%@",[fg arrayOfPermutations]);
 }
 
 @end
