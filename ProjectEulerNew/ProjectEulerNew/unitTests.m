@@ -203,4 +203,16 @@
 	printf("Total Namescore: %ld\n", [NameScores calcTotalScore:arr]);
 }
 
+- (void)prob24_0_GetPerm {
+	FactorialGen *fg = [[FactorialGen alloc] initWithString:@"012"];
+	NSLog(@"%@",[fg arrayOfPermutations]);
+
+	fg = [[FactorialGen alloc] initWithString:@"1234"];
+	NSLog(@"%@",[fg arrayOfPermutations]);
+}
+
+- (void)prob24_1_getMillionth {
+	FactorialGen *fg = [[FactorialGen alloc] initWithString:@"0123456789"];
+	NSLog(@"%@",[fg arrayOfPermutations][999999]);
+}
 @end

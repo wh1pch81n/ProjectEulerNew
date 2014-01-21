@@ -16,6 +16,7 @@
 		7F7D756517BEB88200B05C0D /* ProjectEulerNew.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F7D756417BEB88200B05C0D /* ProjectEulerNew.1 */; };
 		7F7D756D17BEB9D700B05C0D /* sieve_of_eratosthenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */; };
 		7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D757117BEBC9700B05C0D /* unitTests.m */; };
+		7F7F2D21188DF1470067AB02 /* FactorialGen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F2D20188DF1470067AB02 /* FactorialGen.m */; };
 		7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */; };
 		7FD405641868F18700A42D14 /* DHAmicableNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD405631868F18700A42D14 /* DHAmicableNumber.m */; };
 		7FFF331117C69AA800ECE6E0 /* DHBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF331017C69AA800ECE6E0 /* DHBigInteger.m */; };
@@ -56,6 +57,8 @@
 		7F7D757017BEBC9700B05C0D /* unitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unitTests.h; sourceTree = "<group>"; };
 		7F7D757117BEBC9700B05C0D /* unitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unitTests.m; sourceTree = "<group>"; };
 		7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderAPI.h; sourceTree = "<group>"; };
+		7F7F2D1F188DF1470067AB02 /* FactorialGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactorialGen.h; sourceTree = "<group>"; };
+		7F7F2D20188DF1470067AB02 /* FactorialGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactorialGen.m; sourceTree = "<group>"; };
 		7FAD312217C58FA600AC8795 /* DHFullAdderBase10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHFullAdderBase10.h; sourceTree = "<group>"; };
 		7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHFullAdderBase10.m; sourceTree = "<group>"; };
 		7FD405621868F18700A42D14 /* DHAmicableNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAmicableNumber.h; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 		7F7D756E17BEB9EA00B05C0D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7F7F2D1E188DF10A0067AB02 /* Permutation */,
 				7FF9AFD9187A79190076ADEB /* NameScores */,
 				7FD405611868F15800A42D14 /* AmicableNumber */,
 				7F4B1E4017D7DE230022E4A4 /* TrianglePaths */,
@@ -154,6 +158,15 @@
 				7F7D757117BEBC9700B05C0D /* unitTests.m */,
 			);
 			name = unitTests;
+			sourceTree = "<group>";
+		};
+		7F7F2D1E188DF10A0067AB02 /* Permutation */ = {
+			isa = PBXGroup;
+			children = (
+				7F7F2D1F188DF1470067AB02 /* FactorialGen.h */,
+				7F7F2D20188DF1470067AB02 /* FactorialGen.m */,
+			);
+			name = Permutation;
 			sourceTree = "<group>";
 		};
 		7FD405611868F15800A42D14 /* AmicableNumber */ = {
@@ -260,6 +273,7 @@
 				7FFF331117C69AA800ECE6E0 /* DHBigInteger.m in Sources */,
 				7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */,
 				7F7D756117BEB88200B05C0D /* main.m in Sources */,
+				7F7F2D21188DF1470067AB02 /* FactorialGen.m in Sources */,
 				7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */,
 				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
 				7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */,

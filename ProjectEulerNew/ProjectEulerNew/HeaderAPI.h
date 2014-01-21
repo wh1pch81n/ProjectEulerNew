@@ -16,4 +16,5 @@
 #import "TrianglePaths.h"
 #import "DHAmicableNumber.h"
 #import "NameScores.h"
+#import "FactorialGen.h"
 #endif
