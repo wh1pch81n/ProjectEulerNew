@@ -203,4 +203,9 @@
 	printf("Total Namescore: %ld\n", [NameScores calcTotalScore:arr]);
 }
 
+- (void)prob24_0_GetPerm {
+	FactorialGen *fg = [[FactorialGen alloc] initWithString:@"012"];
+	NSLog(@"%@",[fg arrayOfPermutations]);
+}
+
 @end

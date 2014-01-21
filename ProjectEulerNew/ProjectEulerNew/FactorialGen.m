@@ -40,4 +40,8 @@
 	}
 }
 
+- (NSArray *)arrayOfPermutations {
+	return self->arrTree;
+}
+
 @end
