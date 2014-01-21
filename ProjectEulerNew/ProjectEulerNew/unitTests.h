@@ -24,4 +24,5 @@
 - (void)prob21_1_sumOfAllAmicableUnder10000;
 - (void)prob22_0_NameScore;
 - (void)prob24_0_GetPerm;
+- (void)prob24_1_getMillionth;
 @end

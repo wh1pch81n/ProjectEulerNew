@@ -29,8 +29,9 @@ int main(int argc, const char * argv[])
 //			[NSValue valueWithPointer:@selector(prob20_0_FactorialDigitSum)],
 //			[NSValue valueWithPointer:@selector(prob21_0_isAmicableNumber)],
 //			[NSValue valueWithPointer:@selector(prob21_1_sumOfAllAmicableUnder10000)],
-//			[NSValue valueWithPointer:@selector(prob22_0_NameScore)]
-			[NSValue valueWithPointer:@selector(prob24_0_GetPerm)]
+//			[NSValue valueWithPointer:@selector(prob22_0_NameScore)],
+			[NSValue valueWithPointer:@selector(prob24_0_GetPerm)],
+			[NSValue valueWithPointer:@selector(prob24_1_getMillionth)],
 			];
 		
 		unitTests *UT = [unitTests new];
