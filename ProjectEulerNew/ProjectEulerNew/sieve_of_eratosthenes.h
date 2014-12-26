@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface DHsieveOfEratosthenes : NSObject
-/* ---------------------------------------------------------------------------
- Brief:  an array of prime numbers up to a specified maximum
- param: (maxNum) => the upper bound in prime generation
- return: (NSArray *) => an array of prime numbers up to a specified maximum
+/** ---------------------------------------------------------------------------
+ @brief An array of prime numbers up to a specified maximum
+ @param (NSNumber *)maxNum => the upper bound in prime generation
+ @return (NSArray *) => an array of prime numbers up to a specified maximum
  */
--(NSArray *)generateSieveUpTo:(NSNumber *)maxNum;
-/* ---------------------------------------------------------------------------
- Brief:  Largest Prime less than max number
- param: (num) => the upper bound in prime generation
- return: (NSNumber *) => the largest less than or equal to num
++ (NSArray *)generateSieveUpTo:(NSNumber *)maxNum;
+/** ---------------------------------------------------------------------------
+ @brief Largest Prime less than max number
+ @param (NSNumber *)num => the upper bound in prime generation
+ @return (NSNumber *) => the largest less than or equal to num
  */
--(NSNumber *)getPrimeNumberLessThan:(NSNumber *)num;
++ (NSNumber *)getPrimeNumberLessThan:(NSNumber *)num;
 @end

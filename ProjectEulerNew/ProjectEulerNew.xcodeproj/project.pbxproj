@@ -10,14 +10,15 @@
 		7F497E9B17FCEE5B00B98CCC /* NameScores.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F497E9A17FCEE5B00B98CCC /* NameScores.m */; };
 		7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B1E3E17D7DE190022E4A4 /* TrianglePaths.m */; };
 		7F4BCB3217CBDD8A0073ABD3 /* NSNumber+numberAsWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */; };
+		7F64D10A1A4DDB2800C4587E /* ProjectEulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F64D1091A4DDB2800C4587E /* ProjectEulerTests.m */; };
 		7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */; };
 		7F7D755E17BEB88200B05C0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7D755D17BEB88200B05C0D /* Foundation.framework */; };
 		7F7D756117BEB88200B05C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756017BEB88200B05C0D /* main.m */; };
 		7F7D756517BEB88200B05C0D /* ProjectEulerNew.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F7D756417BEB88200B05C0D /* ProjectEulerNew.1 */; };
 		7F7D756D17BEB9D700B05C0D /* sieve_of_eratosthenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */; };
-		7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D757117BEBC9700B05C0D /* unitTests.m */; };
 		7F7F2D21188DF1470067AB02 /* FactorialGen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F2D20188DF1470067AB02 /* FactorialGen.m */; };
 		7FAD312417C58FA600AC8795 /* DHFullAdderBase10.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD312317C58FA600AC8795 /* DHFullAdderBase10.m */; };
+		7FBF3F781A4DE830000CD890 /* sieve_of_eratosthenes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */; };
 		7FD405641868F18700A42D14 /* DHAmicableNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD405631868F18700A42D14 /* DHAmicableNumber.m */; };
 		7FFF331117C69AA800ECE6E0 /* DHBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF331017C69AA800ECE6E0 /* DHBigInteger.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,9 @@
 		7F4B1E4217D7E5260022E4A4 /* medTriangle */ = {isa = PBXFileReference; lastKnownFileType = text; path = medTriangle; sourceTree = "<group>"; };
 		7F4BCB3017CBDD8A0073ABD3 /* NSNumber+numberAsWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+numberAsWord.h"; sourceTree = "<group>"; };
 		7F4BCB3117CBDD8A0073ABD3 /* NSNumber+numberAsWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+numberAsWord.m"; sourceTree = "<group>"; };
+		7F64D1051A4DDB2800C4587E /* ProjectEulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectEulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F64D1081A4DDB2800C4587E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F64D1091A4DDB2800C4587E /* ProjectEulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectEulerTests.m; sourceTree = "<group>"; };
 		7F6DDB7E17C1513100168225 /* DHHalfAdderBase10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHalfAdderBase10.h; sourceTree = "<group>"; };
 		7F6DDB7F17C1513100168225 /* DHHalfAdderBase10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHalfAdderBase10.m; sourceTree = "<group>"; };
 		7F7D755A17BEB88200B05C0D /* ProjectEulerNew */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEulerNew; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F64D1021A4DDB2800C4587E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F7D755717BEB88200B05C0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,10 +101,28 @@
 			name = TrianglePaths;
 			sourceTree = "<group>";
 		};
+		7F64D1061A4DDB2800C4587E /* ProjectEulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F64D1091A4DDB2800C4587E /* ProjectEulerTests.m */,
+				7F64D1071A4DDB2800C4587E /* Supporting Files */,
+			);
+			path = ProjectEulerTests;
+			sourceTree = "<group>";
+		};
+		7F64D1071A4DDB2800C4587E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F64D1081A4DDB2800C4587E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7F7D755117BEB88200B05C0D = {
 			isa = PBXGroup;
 			children = (
 				7F7D755F17BEB88200B05C0D /* ProjectEulerNew */,
+				7F64D1061A4DDB2800C4587E /* ProjectEulerTests */,
 				7F7D755C17BEB88200B05C0D /* Frameworks */,
 				7F7D755B17BEB88200B05C0D /* Products */,
 			);
@@ -103,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				7F7D755A17BEB88200B05C0D /* ProjectEulerNew */,
+				7F64D1051A4DDB2800C4587E /* ProjectEulerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +251,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F64D1041A4DDB2800C4587E /* ProjectEulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F64D10B1A4DDB2800C4587E /* Build configuration list for PBXNativeTarget "ProjectEulerTests" */;
+			buildPhases = (
+				7F64D1011A4DDB2800C4587E /* Sources */,
+				7F64D1021A4DDB2800C4587E /* Frameworks */,
+				7F64D1031A4DDB2800C4587E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectEulerTests;
+			productName = ProjectEulerTests;
+			productReference = 7F64D1051A4DDB2800C4587E /* ProjectEulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7F7D755917BEB88200B05C0D /* ProjectEulerNew */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F7D756817BEB88200B05C0D /* Build configuration list for PBXNativeTarget "ProjectEulerNew" */;
@@ -246,6 +293,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Derrick Ho";
+				TargetAttributes = {
+					7F64D1041A4DDB2800C4587E = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
 			};
 			buildConfigurationList = 7F7D755517BEB88200B05C0D /* Build configuration list for PBXProject "ProjectEulerNew" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -260,11 +312,31 @@
 			projectRoot = "";
 			targets = (
 				7F7D755917BEB88200B05C0D /* ProjectEulerNew */,
+				7F64D1041A4DDB2800C4587E /* ProjectEulerTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		7F64D1031A4DDB2800C4587E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		7F64D1011A4DDB2800C4587E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FBF3F781A4DE830000CD890 /* sieve_of_eratosthenes.m in Sources */,
+				7F64D10A1A4DDB2800C4587E /* ProjectEulerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F7D755617BEB88200B05C0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,7 +347,6 @@
 				7F7D756117BEB88200B05C0D /* main.m in Sources */,
 				7F7F2D21188DF1470067AB02 /* FactorialGen.m in Sources */,
 				7F4B1E3F17D7DE190022E4A4 /* TrianglePaths.m in Sources */,
-				7F7D757217BEBC9700B05C0D /* unitTests.m in Sources */,
 				7F6DDB8017C1513100168225 /* DHHalfAdderBase10.m in Sources */,
 				7F4BCB3217CBDD8A0073ABD3 /* NSNumber+numberAsWord.m in Sources */,
 				7F497E9B17FCEE5B00B98CCC /* NameScores.m in Sources */,
@@ -286,6 +357,48 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		7F64D10C1A4DDB2800C4587E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ProjectEulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7F64D10D1A4DDB2800C4587E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ProjectEulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7F7D756617BEB88200B05C0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,6 +490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F64D10B1A4DDB2800C4587E /* Build configuration list for PBXNativeTarget "ProjectEulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F64D10C1A4DDB2800C4587E /* Debug */,
+				7F64D10D1A4DDB2800C4587E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F7D755517BEB88200B05C0D /* Build configuration list for PBXProject "ProjectEulerNew" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
