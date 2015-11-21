@@ -58,8 +58,6 @@
 		7F7D756417BEB88200B05C0D /* ProjectEulerNew.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ProjectEulerNew.1; sourceTree = "<group>"; };
 		7F7D756B17BEB9D700B05C0D /* sieve_of_eratosthenes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sieve_of_eratosthenes.h; sourceTree = "<group>"; };
 		7F7D756C17BEB9D700B05C0D /* sieve_of_eratosthenes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sieve_of_eratosthenes.m; sourceTree = "<group>"; };
-		7F7D757017BEBC9700B05C0D /* unitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unitTests.h; sourceTree = "<group>"; };
-		7F7D757117BEBC9700B05C0D /* unitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unitTests.m; sourceTree = "<group>"; };
 		7F7D757317BEBCFB00B05C0D /* HeaderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderAPI.h; sourceTree = "<group>"; };
 		7F7F2D1F188DF1470067AB02 /* FactorialGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactorialGen.h; sourceTree = "<group>"; };
 		7F7F2D20188DF1470067AB02 /* FactorialGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactorialGen.m; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 		7F7D755F17BEB88200B05C0D /* ProjectEulerNew */ = {
 			isa = PBXGroup;
 			children = (
-				7F7D756F17BEBA0D00B05C0D /* unitTests */,
 				7F7D756E17BEB9EA00B05C0D /* API */,
 				7F7D756417BEB88200B05C0D /* ProjectEulerNew.1 */,
 				7F7D756017BEB88200B05C0D /* main.m */,
@@ -179,15 +176,6 @@
 				7FFF331217C69AB400ECE6E0 /* BigIntegers */,
 			);
 			name = API;
-			sourceTree = "<group>";
-		};
-		7F7D756F17BEBA0D00B05C0D /* unitTests */ = {
-			isa = PBXGroup;
-			children = (
-				7F7D757017BEBC9700B05C0D /* unitTests.h */,
-				7F7D757117BEBC9700B05C0D /* unitTests.m */,
-			);
-			name = unitTests;
 			sourceTree = "<group>";
 		};
 		7F7F2D1E188DF10A0067AB02 /* Permutation */ = {
